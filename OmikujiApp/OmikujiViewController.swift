@@ -17,8 +17,7 @@ final class OmikujiViewController: UIViewController {
     }
     
     private func setupLabelLayer() {
-        let cornerRadiusNum
-            = 2
+        let cornerRadiusNum = 2
         
         luckyLabel.layer.borderColor = UIColor.blue.cgColor
         luckyLabel.layer.borderWidth = 5
