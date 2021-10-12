@@ -9,15 +9,16 @@ import UIKit
 
 final class OmikujiViewController: UIViewController {
     
-    @IBOutlet weak var luckyLabel: UILabel!
+    @IBOutlet private weak var luckyLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLabelLayer()
     }
     
-    func setupLabelLayer() {
-        let cornerRadiusNum = 2
+    private func setupLabelLayer() {
+        let cornerRadiusNum
+            = 2
         
         luckyLabel.layer.borderColor = UIColor.blue.cgColor
         luckyLabel.layer.borderWidth = 5
