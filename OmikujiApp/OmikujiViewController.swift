@@ -17,21 +17,21 @@ final class OmikujiViewController: UIViewController {
     }
     
     private func setupLabelLayer() {
-        let cornerRadiusNum = 2
+        let cornerRadiusNum: CGFloat = 2
         
         luckyLabel.layer.borderColor = UIColor.blue.cgColor
         luckyLabel.layer.borderWidth = 5
-        luckyLabel.layer.cornerRadius = luckyLabel.bounds.width / CGFloat(cornerRadiusNum)
+        luckyLabel.layer.cornerRadius = luckyLabel.bounds.width / cornerRadiusNum
         luckyLabel.layer.masksToBounds = true
     }
     
     @IBAction private func randomButton(_ sender: UIButton) {
-        var results = ["大吉",
-                       "小吉",
-                       "中吉",
-                       "末吉",
-                       "凶"]
-        results.shuffle()
-        self.luckyLabel.text = results.first
+        var omikujiResults = ["大吉",
+                              "小吉",
+                              "中吉",
+                              "末吉",
+                              "凶"]
+        omikujiResults.shuffle()
+        self.luckyLabel.text = omikujiResults.first
     }
 }
